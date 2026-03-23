@@ -1,3 +1,7 @@
+html {
+    font-family: Roboto;
+}
+
 #fjell-liste li {
     border: 1px solid #e4e5f1;
     padding: 20px;

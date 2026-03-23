@@ -13,8 +13,15 @@ function get_fjell() {
                 console.log(`Hei. Jeg har informasjon om dette fjellet: ${fjellet.navn}`);
                 const li = document.createElement('li');
                 li.innerHTML = `
-                    <div class="fjell-item">
+                    <div class="fjell-navn">
                         <span>${fjellet.navn}</span>
+                    </div>
+                    <div class="fjell-beskrivelse">
+                        <span>${fjellet.beskrivelse}</span>
+                    </div>
+                    <div class="fjell-informasjon">
+                        <span>Høyde: ${fjellet.hoyde}</span> <br>
+                        <span>Region: ${fjellet.region}</span>
                     </div>
                 `;
                 fjell_liste.appendChild(li);

@@ -1,13 +1,10 @@
 <?php
+// kobler til database
+require_once "../database.php";
+
+// henter alt fra fjell tabellen
 $sql = "select * from fjell;";
 $stmt = $mysqli->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();
-$kulefjell = $result->fetch_assoc();
-
-// sender data om fjell tilbake til javascripten
-echo json_encode([
-    'success' => true,
-    'navn' => $kulefjell['navn'],
-    'hoyde' => $kulefjell[''],
-]);
+echo json_encode($result->fetch_all(MYSQLI_ASSOC));

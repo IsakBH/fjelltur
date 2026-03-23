@@ -1,5 +1,6 @@
 <?php
-include "database.php";
+session_start();
+require_once "database.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +12,13 @@ include "database.php";
     </head>
 
     <body>
-
+        <?php
+        $sql = "select * from fjell;";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $kulefjell = $result->fetch_assoc();
+        print_r(array_keys($kulefjell));
+        ?>
     </body>
 </html>

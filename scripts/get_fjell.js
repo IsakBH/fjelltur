@@ -12,7 +12,11 @@ function get_fjell() {
             fjell.forEach(fjellet => {
                 console.log(`Hei. Jeg har informasjon om dette fjellet: ${fjellet.navn}`);
                 const li = document.createElement('li');
+                let fjell_navn = fjellet.navn;
+                let lowercase_fjell_navn = fjell_navn.toLowerCase()
+                let fjell_bilde_path = `images/fjell/${lowercase_fjell_navn}.jpg`
                 li.innerHTML = `
+                    <img class="fjell-bilde" src="${fjell_bilde_path}">
                     <div class="fjell-navn">
                         <span>${fjellet.navn}</span>
                     </div>

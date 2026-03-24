@@ -3,7 +3,7 @@
 require_once "../database.php";
 
 // henter alt fra fjell tabellen
-$sql = "select fjell.navn, fjell.beskrivelse, fjell.hoyde, fjell.fotografi, omrade.navn as omradenavn from fjell join omrade on omrade.id = fjell.region;";
+$sql = "select fjell.navn, fjell.beskrivelse, fjell.hoyde, fjell.fotografi, omrade.navn as omradenavn from fjell join omrade on omrade.id = fjell.region order by fjell.hoyde desc;";
 $stmt = $mysqli->prepare($sql);
 $stmt->execute();
 $result = $stmt->get_result();

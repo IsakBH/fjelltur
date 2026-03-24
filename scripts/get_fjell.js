@@ -39,13 +39,3 @@ function get_fjell() {
 document.addEventListener("DOMContentLoaded", () => {
     get_fjell();
 })
-
-/*
-const li = document.createElement('li');
-li.innerHTML = `
-    <div id="fjell-item">
-        <span id="fjell-navn">${fjellet.navn}</span>
-    </div>
-`;
-list.appendChild(li);
-*/

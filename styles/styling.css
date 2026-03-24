@@ -16,6 +16,12 @@ html {
     background-color: #e4e5f1;
     padding: 0px;
     margin: 10px;
+    transition: 0.2s;
+    &:hover {
+        transform: translateY(-5px);
+        background-color: #d3d5e8;
+        cursor: pointer;
+    }
 }
 
 .fjell-bilde {

@@ -1,0 +1,13 @@
+Her er noen SQL queries jeg kan kopiere for å gjøre det enklere for meg selv. Slipper å skrive dem 8000 ganger:
+## Inserte nye fjell inn i databasen - med Lyderhorn som eksempel
+```sql
+insert into fjell (navn, hoyde, beskrivelse, fotografi, region) values (
+    "Lyderhorn",
+    "396",
+    "Lyderhorn er et av de syv byfjellene i Bergen, og ligger rundt 5km vest for sentrum i Loddefjord.",
+    "lyderhorn.jpg",
+    (select id from omrade where navn = 'Bergensfjellene')
+);
+```
+**Fine ressurser:**
+* [W3Schools SQL Insert Into Select](https://www.w3schools.com/SQL/sql_insert_into_select.asp)

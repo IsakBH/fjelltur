@@ -20,3 +20,7 @@ html {
 .fjell-informasjon {
     padding: 10px;
 }
+
+.fjell-navn {
+    font-weight: bolder;
+}

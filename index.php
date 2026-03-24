@@ -19,7 +19,7 @@ require_once "database.php";
     <body>
         <div id="fjell-display">
             <div id="fjell-liste">
-
+                <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->
             </div>
         </div>
 

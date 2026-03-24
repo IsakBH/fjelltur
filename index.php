@@ -17,15 +17,6 @@ require_once "database.php";
     </head>
 
     <body>
-        <?php
-        /*$sql = "select * from fjell;";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $kulefjell = $result->fetch_assoc();
-        print_r(array_keys($kulefjell));*/
-        ?>
-
         <div id="fjell-display">
             <div id="fjell-liste">
 

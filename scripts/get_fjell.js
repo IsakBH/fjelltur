@@ -20,13 +20,13 @@ function get_fjell() {
                 let fjell_bilde_path = `images/fjell/${lowercase_fjell_navn}.jpg`
                 li.innerHTML = `
                     <img class="fjell-bilde" src="${fjell_bilde_path}">
-                    <div class="fjell-navn">
-                        <span>${fjell_navn}</span>
-                    </div>
-                    <div class="fjell-beskrivelse">
-                        <span>${fjellet.beskrivelse}</span>
-                    </div>
                     <div class="fjell-informasjon">
+                        <div class="fjell-navn">
+                            <span>${fjell_navn}</span>
+                        </div>
+                        <div class="fjell-beskrivelse">
+                            <span>${fjellet.beskrivelse}</span>
+                        </div>
                         <span>Høyde: ${fjellet.hoyde} meter</span> <br>
                         <span>Region: ${fjellet.omradenavn}</span>
                     </div>

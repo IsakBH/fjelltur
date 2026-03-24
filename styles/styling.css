@@ -2,6 +2,11 @@ html {
     font-family: Roboto;
 }
 
+#fjell-liste {
+    display: flex;
+    list-style: none;
+}
+
 #fjell-liste li {
     border: 1px solid #d2d3db;
     box-shadow: 0 0 3px #d2d3db;
@@ -10,6 +15,7 @@ html {
     width: 500px;
     background-color: #e4e5f1;
     padding: 0px;
+    margin: 10px;
 }
 
 .fjell-bilde {
@@ -23,4 +29,8 @@ html {
 
 .fjell-navn {
     font-weight: bolder;
+}
+
+#fjell-display {
+    display: flex;
 }

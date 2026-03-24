@@ -26,7 +26,7 @@ function get_fjell() {
                         </div>
                         <div class="fjell-beskrivelse">
                             <span>${fjellet.beskrivelse}</span>
-                        </div>
+                        </div> <br>
                         <span>Høyde: ${fjellet.hoyde} meter</span> <br>
                         <span>Region: ${fjellet.omradenavn}</span>
                     </div>

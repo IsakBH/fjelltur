@@ -10,14 +10,14 @@ function get_fjell() {
             fjell_liste.innerHTML = '';
 
             fjell.forEach(fjellet => {
-                let ny_fjell_lyd = new Audio("assets/sounds/nyfjell.mp3");
+                let ny_fjell_lyd = new Audio("storage/sounds/nyfjell.mp3");
                 ny_fjell_lyd.play();
                 console.log(`Hei. Jeg har informasjon om dette fjellet: ${fjellet.navn}`);
                 console.log(fjellet);
                 const li = document.createElement('li');
                 let fjell_navn = fjellet.navn;
                 let lowercase_fjell_navn = fjell_navn.toLowerCase()
-                let fjell_bilde_path = `images/fjell/${lowercase_fjell_navn}.jpg`
+                let fjell_bilde_path = `storage/images/fjell/${lowercase_fjell_navn}.jpg`
                 li.innerHTML = `
                     <img class="fjell-bilde" src="${fjell_bilde_path}">
                     <div class="fjell-informasjon">

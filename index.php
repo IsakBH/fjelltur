@@ -11,6 +11,9 @@ require_once "database.php";
         <link rel="stylesheet" href="styles/sidebar.css" />
         <link rel="icon" href="storage/images/icons/favicon.ico" />
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
         <!-- google fonts roboto -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

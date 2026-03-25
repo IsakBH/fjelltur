@@ -9,12 +9,15 @@
 }
 
 #sidebar-content {
-    text-align: center;
+    padding: 10px;
+    h2 {
+        margin-bottom: 10px;
+    }
 }
 
 #fjellturer-knapp {
     width: 98%;
-    padding: 20px;
+    padding: 20px !important;
     color: black;
     background-color: transparent;
     border: none;

@@ -22,8 +22,11 @@ require_once "database.php";
 
     <body>
         <div id="sidebar">
-            <h1>Fjell</h1>
-            <button></button>
+            <div id="sidebar-content">
+                <h2>Deg</h2>
+                <button id="fjellturer-knapp" onclick="location.href='index.php';"><i class="fa-solid fa-home"></i>Hjem</button>
+                <button id="fjellturer-knapp" onclick="location.href='pages/fjelltur.php;'"><i class="fa-solid fa-person-hiking"></i>Fjellturer</button>
+            </div>
         </div>
 
         <div id="fjell-display">

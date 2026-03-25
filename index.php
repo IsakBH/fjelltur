@@ -8,7 +8,7 @@ require_once "database.php";
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="styles/styling.css" />
-        <link rel="icon" href="" />
+        <link rel="icon" href="storage/images/icons/favicon.ico" />
 
         <!-- google fonts roboto -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,10 @@ require_once "database.php";
     </head>
 
     <body>
+        <div id="sidebar">
+            <h1>Fjell</h1>
+        </div>
+
         <div id="fjell-display">
             <div id="fjell-liste">
                 <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->

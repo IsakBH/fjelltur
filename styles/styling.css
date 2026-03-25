@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: Roboto;
 }
@@ -5,6 +9,8 @@ html {
 #fjell-liste {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 #fjell-liste li {
@@ -12,12 +18,14 @@ html {
     box-shadow: 0 0 3px #d2d3db;
     padding: 20px;
     border-radius: 10px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: fit-content;
     background-color: #e4e5f1;
     padding: 0px;
     margin: 10px;
     transition: 0.2s;
+    overflow: hidden;
     &:hover {
         transform: translateY(-5px);
         background-color: #d3d5e8;
@@ -27,7 +35,6 @@ html {
 
 .fjell-bilde {
     width: 100%;
-    border-radius: 10px 10px 0 0;
 }
 
 .fjell-informasjon {
@@ -45,4 +52,5 @@ html {
     right: 0;
     width: 80%;
     height: 100%;
+    overflow-y: auto;
 }

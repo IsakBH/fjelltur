@@ -23,6 +23,7 @@ require_once "database.php";
     <body>
         <div id="sidebar">
             <h1>Fjell</h1>
+            <button></button>
         </div>
 
         <div id="fjell-display">

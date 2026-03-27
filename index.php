@@ -28,7 +28,7 @@ require_once "database.php";
                 <hr>
 
                 <button class="sidebar-knapp" onclick="location.href='index.php';"><i class="fa-solid fa-home"></i>Hjem</button>
-                <button class="sidebar-knapp" onclick="location.href='pages/fjelltur.php;'"><i class="fa-solid fa-person-hiking"></i>Fjellturer</button>
+                <button class="sidebar-knapp" onclick="location.href='pages/fjelltur.php';"><i class="fa-solid fa-person-hiking"></i>Fjellturer</button>
 
                 <hr>
 

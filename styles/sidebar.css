@@ -15,7 +15,7 @@
     }
 }
 
-#fjellturer-knapp {
+.sidebar-knapp {
     width: 98%;
     padding: 20px !important;
     color: black;

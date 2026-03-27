@@ -19,5 +19,16 @@ insert into fjell (navn, hoyde, beskrivelse, fotografi, region) values (
     (select id from omrade where navn = 'Bergensfjellene')
 );
 ```
+## Inserte nye fjellturer inn i databasen - med turen jeg var på med Andreas og Ivan den 21. mars som eksempel (hvis du ikke skjønte det så er jeg glad i insert into select)
+```sql
+insert into fjelltur (navn, beskrivelse, dato, person, fjell) values (
+    "Lyderhorn med Ivan og Andreas",
+    "Gikk opp Lyderhorn sammen med Ivan og Andreas. Var egentlig planlagt at vi skulle være flere, men de andre ditchet oss. Disse folkene var da Konrad, Viggo, Mats og Tobias Helgøy. :(",
+    "2026-03-21",
+    (select id from person where brukernavn = 'Isak'),
+    (select id from fjell where navn = 'Lyderhorn')
+);
+```
+
 **Fine ressurser:**
 * [W3Schools SQL Insert Into Select](https://www.w3schools.com/SQL/sql_insert_into_select.asp)

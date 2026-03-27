@@ -36,7 +36,7 @@ require_once "database.php";
 
                 <hr>
 
-                <button class="sidebar-knapp" onclick="location.href='pages/venner.php';"></button>
+                <button class="sidebar-knapp" onclick="location.href='pages/venner.php';"><i class="fa-solid fa-user-group"></i> Mine venner</button>
             </div>
         </div>
 

@@ -37,3 +37,10 @@
         background-color: #c2c5df;
     }
 }
+
+#author {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 10px auto;
+}

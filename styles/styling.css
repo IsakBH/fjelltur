@@ -11,6 +11,10 @@ html {
     list-style: none;
     flex-wrap: wrap;
     padding: 20px;
+    height: 100%;
+    &:last-child {
+        margin-bottom: 40px;
+    }
 }
 
 #fjell-liste li {

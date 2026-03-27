@@ -23,9 +23,24 @@ require_once "database.php";
     <body>
         <div id="sidebar">
             <div id="sidebar-content">
-                <h2>Deg</h2>
-                <button id="fjellturer-knapp" onclick="location.href='index.php';"><i class="fa-solid fa-home"></i>Hjem</button>
-                <button id="fjellturer-knapp" onclick="location.href='pages/fjelltur.php;'"><i class="fa-solid fa-person-hiking"></i>Fjellturer</button>
+                <h2><i class="fa-solid fa-person"></i> Deg</h2>
+
+                <hr>
+
+                <button class="sidebar-knapp" onclick="location.href='index.php';"><i class="fa-solid fa-home"></i>Hjem</button>
+                <button class="sidebar-knapp" onclick="location.href='pages/fjelltur.php';"><i class="fa-solid fa-person-hiking"></i>Fjellturer</button>
+                <button class="sidebar-knapp" onclick="openSettings()"><i class="fa-solid fa-sliders"></i> Innstillinger</button>
+
+                <hr>
+
+                <h2><i class="fa-solid fa-people-group"></i> Sosialt</h2>
+
+                <hr>
+
+                <button class="sidebar-knapp" onclick="location.href='pages/profil.php';"><i class="fa-solid fa-address-card"></i> Min profil</button>
+                <button class="sidebar-knapp" onclick="location.href='pages/venner.php';"><i class="fa-solid fa-user-group"></i> Mine venner</button>
+
+                <p id="author">Laget av Isak B. Henriksen</p>
             </div>
         </div>
 

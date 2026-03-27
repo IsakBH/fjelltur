@@ -5,6 +5,8 @@
 > Til Hilde:
 > Databasefilen (mysql .sql fil) ligger i storage/database/fjell.sql.
 
+# Bilde av databasemodellen fra MySQL Workbench
+<img width="1089" height="576" alt="image" src="https://github.com/user-attachments/assets/02d5a82b-e447-4f5d-b11d-c5e9e67514e6" />
 
 Her er noen SQL queries jeg kan kopiere for å gjøre det enklere for meg selv. Slipper å skrive dem 8000 ganger:
 ## Inserte nye fjell inn i databasen - med Lyderhorn som eksempel

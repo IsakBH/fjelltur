@@ -35,6 +35,10 @@
     /*transition: 0.05s;*/
     &:hover {
         background-color: #c2c5df;
+        cursor: pointer;
+    }
+    &:active {
+        cursor: grabbing;
     }
 }
 

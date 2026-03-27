@@ -1,3 +1,8 @@
+> # Til Hilde:
+> * Databasefilen (mysql .sql fil) ligger i storage/database/fjell.sql.
+
+---------------------------------------------------------------------------------
+
 Her er noen SQL queries jeg kan kopiere for å gjøre det enklere for meg selv. Slipper å skrive dem 8000 ganger:
 ## Inserte nye fjell inn i databasen - med Lyderhorn som eksempel
 ```sql

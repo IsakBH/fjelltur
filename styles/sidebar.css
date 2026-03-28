@@ -11,7 +11,7 @@
 #sidebar-content {
     padding: 10px;
     h2 {
-        color: #1f1c1f;
+        color: #1b1c2e;
     }
 
     hr {
@@ -25,7 +25,7 @@
 .sidebar-knapp {
     width: 98%;
     padding: 20px !important;
-    color: #1f1c1f;
+    color: #1b1c2e;
     background-color: transparent;
     border: none;
     border-radius: 10px;

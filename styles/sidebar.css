@@ -48,3 +48,7 @@
     text-align: center;
     margin: 10px auto;
 }
+
+.active-page {
+    background-color: #b8bbf5 ;
+}

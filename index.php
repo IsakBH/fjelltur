@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once "database.php";
+
+$filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
+$filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
 ?>
 
 <!DOCTYPE html>
@@ -21,28 +24,10 @@ require_once "database.php";
     </head>
 
     <body>
-        <div id="sidebar">
-            <div id="sidebar-content">
-                <h2><i class="fa-solid fa-person"></i> Deg</h2>
-
-                <hr>
-
-                <button class="sidebar-knapp" onclick="location.href='index.php';"><i class="fa-solid fa-home"></i>Hjem</button>
-                <button class="sidebar-knapp" onclick="location.href='pages/fjelltur.php';"><i class="fa-solid fa-person-hiking"></i>Fjellturer</button>
-                <button class="sidebar-knapp" onclick="openSettings()"><i class="fa-solid fa-sliders"></i> Innstillinger</button>
-
-                <hr>
-
-                <h2><i class="fa-solid fa-people-group"></i> Sosialt</h2>
-
-                <hr>
-
-                <button class="sidebar-knapp" onclick="location.href='pages/profil.php';"><i class="fa-solid fa-address-card"></i> Min profil</button>
-                <button class="sidebar-knapp" onclick="location.href='pages/venner.php';"><i class="fa-solid fa-user-group"></i> Mine venner</button>
-
-                <p id="author">Laget av Isak B. Henriksen</p>
-            </div>
-        </div>
+        <!-- Sidebaren -->
+        <?php
+        include("./storage/includes/sidebar.php");
+        ?>
 
         <div id="fjell-display">
             <div id="fjell-liste">

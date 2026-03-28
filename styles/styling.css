@@ -36,6 +36,9 @@ html {
         background-color: #d3d5e8;
         cursor: pointer;
     }
+    span:hover {
+        cursor: text;
+    }
 }
 
 .fjell-bilde {
@@ -44,10 +47,12 @@ html {
 
 .fjell-informasjon {
     padding: 10px;
+    color: #373856;
 }
 
 .fjell-navn {
     font-weight: bolder;
+    color: #1b1c2e;
 }
 
 #fjell-display {

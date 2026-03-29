@@ -2,7 +2,7 @@ const fjell_display = document.getElementById('fjell-display');
 
 function get_fjell() {
     console.log("Henter liste over fjell...")
-    fetch("scripts/get_fjell.php")
+    fetch("/fjelltur/scripts/get_fjell.php")
         .then(response => response.json())
         .then(fjell => {
             console.log(`Informasjon om fjell mottatt!`);
@@ -10,14 +10,14 @@ function get_fjell() {
             fjell_liste.innerHTML = '';
 
             fjell.forEach(fjellet => {
-                let ny_fjell_lyd = new Audio("storage/sounds/nyfjell.mp3");
+                let ny_fjell_lyd = new Audio("/fjelltur/storage/sounds/nyfjell.mp3");
                 ny_fjell_lyd.play();
                 console.log(`Hei. Jeg har informasjon om dette fjellet: ${fjellet.navn}`);
                 console.log(fjellet);
                 const li = document.createElement('li');
                 let fjell_navn = fjellet.navn;
                 let lowercase_fjell_navn = fjell_navn.toLowerCase()
-                let fjell_bilde_path = `storage/images/fjell/${lowercase_fjell_navn}.jpg`
+                let fjell_bilde_path = `/fjelltur/storage/images/fjell/${lowercase_fjell_navn}.jpg`
                 li.innerHTML = `
                     <img class="fjell-bilde" src="${fjell_bilde_path}">
                     <div class="fjell-informasjon">

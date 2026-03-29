@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2026 at 09:39 AM
+-- Generation Time: Mar 27, 2026 at 05:30 PM
 -- Server version: 12.2.2-MariaDB
 -- PHP Version: 8.5.4
 
@@ -44,7 +44,7 @@ CREATE TABLE `fjell` (
   `id` int(10) NOT NULL,
   `navn` varchar(45) NOT NULL,
   `hoyde` int(10) NOT NULL,
-  `beskrivelse` varchar(120) NOT NULL,
+  `beskrivelse` varchar(250) NOT NULL,
   `region` int(16) NOT NULL,
   `fotografi` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -55,7 +55,8 @@ CREATE TABLE `fjell` (
 
 INSERT INTO `fjell` (`id`, `navn`, `hoyde`, `beskrivelse`, `region`, `fotografi`) VALUES
 (1, 'Ulriken', 643, 'Det høyeste av de 7 byfjellene. Ulriken har ekstremt mye aura og aura farmer over hele Bergen.', 1, 'ulriken.jpg'),
-(2, 'Lyderhorn', 396, 'Lyderhorn er et av de syv byfjellene i Bergen, og ligger rundt 5km vest for sentrum i Loddefjord.', 1, 'lyderhorn.jpg');
+(2, 'Lyderhorn', 396, 'Lyderhorn er et av de syv byfjellene i Bergen, og ligger rundt 5km vest for sentrum i Loddefjord.', 1, 'lyderhorn.jpg'),
+(6, 'Vidden', 550, 'Vidden i Bergen er \'hjertet\' av Bergens fjellstrekninger, og binder sammen mange fjell som bl.a Ulriken og Fløyen. Selve vidde platået strekker seg fra sør med Sædalen til nord med Hjorteland og Flaktveit.', 1, 'vidden.jpg');
 
 -- --------------------------------------------------------
 
@@ -65,11 +66,20 @@ INSERT INTO `fjell` (`id`, `navn`, `hoyde`, `beskrivelse`, `region`, `fotografi`
 
 CREATE TABLE `fjelltur` (
   `id` int(8) NOT NULL,
-  `tidspunkt` timestamp NOT NULL,
-  `beskrivelse` int(255) NOT NULL,
+  `navn` varchar(100) NOT NULL COMMENT 'Navnet på fjellturen',
+  `beskrivelse` varchar(255) NOT NULL,
+  `dato` date NOT NULL,
   `person` int(45) NOT NULL,
   `fjell` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `fjelltur`
+--
+
+INSERT INTO `fjelltur` (`id`, `navn`, `beskrivelse`, `dato`, `person`, `fjell`) VALUES
+(1, 'Lyderhorn med Ivan og Andreas', 'Gikk opp Lyderhorn sammen med Ivan og Andreas. Var egentlig planlagt at vi skulle være flere, men de andre ditchet oss. Disse folkene var da Konrad, Viggo, Mats og Tobias Helgøy. :(', '2026-03-21', 1, 2),
+(3, 'Vidden med Viggo, Konrad, Mats og Andreas', 'Gikk over Vidden med folkene nevnt i turnavnet. Det var veldig koselig, selvom Konrad, Mats og Andreas gikk fra meg og Viggo på krysset med veien til Fløyen og veien til Hjorteland.', '2026-03-07', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -163,13 +173,13 @@ ALTER TABLE `bilde`
 -- AUTO_INCREMENT for table `fjell`
 --
 ALTER TABLE `fjell`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `fjelltur`
 --
 ALTER TABLE `fjelltur`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `omrade`

@@ -9,6 +9,7 @@
 **Endringer jeg har gjort etter dette diagrammet ble tegnet:**
 * *Beskrivelse* kolonnen i fjelltur tabellen er nå en varchar og ikke en int - gjorde en liten feil når jeg først satt det opp
 * Utvidet *beskrivelse* kolonnen i fjell tabellen til å være 250 chars lang istedet for 120 - ble litt knapt med kun 120 chars
+* La til en ekstra kolonne i 'fjelltur' tabellen for *thumbnail*. Her lagrer jeg filstien til thumbnailen som vises i visningen av fjellturen.
 
 <img width="1089" height="576" alt="image" src="https://github.com/user-attachments/assets/02d5a82b-e447-4f5d-b11d-c5e9e67514e6" />
 

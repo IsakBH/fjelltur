@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 27, 2026 at 05:30 PM
+-- Generation Time: Mar 29, 2026 at 06:34 PM
 -- Server version: 12.2.2-MariaDB
 -- PHP Version: 8.5.4
 
@@ -69,6 +69,7 @@ CREATE TABLE `fjelltur` (
   `navn` varchar(100) NOT NULL COMMENT 'Navnet på fjellturen',
   `beskrivelse` varchar(255) NOT NULL,
   `dato` date NOT NULL,
+  `thumbnail` varchar(50) NOT NULL,
   `person` int(45) NOT NULL,
   `fjell` int(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -77,9 +78,9 @@ CREATE TABLE `fjelltur` (
 -- Dumping data for table `fjelltur`
 --
 
-INSERT INTO `fjelltur` (`id`, `navn`, `beskrivelse`, `dato`, `person`, `fjell`) VALUES
-(1, 'Lyderhorn med Ivan og Andreas', 'Gikk opp Lyderhorn sammen med Ivan og Andreas. Var egentlig planlagt at vi skulle være flere, men de andre ditchet oss. Disse folkene var da Konrad, Viggo, Mats og Tobias Helgøy. :(', '2026-03-21', 1, 2),
-(3, 'Vidden med Viggo, Konrad, Mats og Andreas', 'Gikk over Vidden med folkene nevnt i turnavnet. Det var veldig koselig, selvom Konrad, Mats og Andreas gikk fra meg og Viggo på krysset med veien til Fløyen og veien til Hjorteland.', '2026-03-07', 1, 6);
+INSERT INTO `fjelltur` (`id`, `navn`, `beskrivelse`, `dato`, `thumbnail`, `person`, `fjell`) VALUES
+(1, 'Lyderhorn med Ivan og Andreas', 'Gikk opp Lyderhorn sammen med Ivan og Andreas. Var egentlig planlagt at vi skulle være flere, men de andre ditchet oss. Disse folkene var da Konrad, Viggo, Mats og Tobias Helgøy. :(', '2026-03-21', 'lyderhornmedivanogandreas2026-03-21.jpg', 1, 2),
+(3, 'Vidden med Viggo, Konrad, Mats og Andreas', 'Gikk over Vidden med folkene nevnt i turnavnet. Det var veldig koselig, selvom Konrad, Mats og Andreas gikk fra meg og Viggo på krysset med veien til Fløyen og veien til Hjorteland.', '2026-03-07', 'viddenmedviggo,konrad,matsogandreas2026-03-07.jpg', 1, 6);
 
 -- --------------------------------------------------------
 

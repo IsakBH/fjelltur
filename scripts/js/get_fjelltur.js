@@ -16,10 +16,9 @@ function get_fjelltur() {
                 console.log(fjelltur);
                 const li = document.createElement('li');
                 let fjelltur_navn = fjelltur.navn;
-                let lowercase_fjelltur_navn = fjelltur_navn.toLowerCase()
-                let fjelltur_bilde_path = `/fjelltur/storage/images/fjelltur/${lowercase_fjelltur_navn}.jpg`
+                let fjelltur_bilde_path = `/fjelltur/storage/images/thumbnails/${fjelltur.thumbnail}`;
                 li.innerHTML = `
-                    <!--<img class="fjell-bilde" src="${fjelltur_bilde_path}">-->
+                    <img class="fjell-bilde" src="${fjelltur_bilde_path}">
                     <div class="fjell-informasjon">
                         <div class="fjell-navn">
                             <span>${fjelltur_navn}</span>

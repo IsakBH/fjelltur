@@ -21,7 +21,7 @@ insert into fjell (navn, hoyde, beskrivelse, fotografi, region) values (
     (select id from omrade where navn = 'Bergensfjellene')
 );
 ```
-## Inserte nye fjellturer inn i databasen - med turen jeg var på med Andreas og Ivan den 21. mars som eksempel (hvis du ikke skjønte det så er jeg glad i insert into select)
+## Inserte nye fjellturer inn i databasen - med turen jeg var på med Andreas og Ivan den 21. mars som eksempel
 ```sql
 insert into fjelltur (navn, beskrivelse, dato, person, fjell) values (
     "Lyderhorn med Ivan og Andreas",

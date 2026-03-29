@@ -30,8 +30,8 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         include("./storage/includes/sidebar.php");
         ?>
 
-        <div id="fjell-display">
-            <div id="fjell-liste">
+        <div id="fjell-display" class="display">
+            <div id="fjell-liste" class="liste">
                 <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->
             </div>
         </div>

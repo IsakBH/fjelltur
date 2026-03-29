@@ -6,7 +6,17 @@ html {
     font-family: Roboto;
 }
 
-#fjell-liste {
+.display {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.liste {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -53,14 +63,4 @@ html {
 .fjell-navn {
     font-weight: bolder;
     color: #1b1c2e;
-}
-
-#fjell-display {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%;
-    height: 100%;
-    overflow-y: auto;
 }

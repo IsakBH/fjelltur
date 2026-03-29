@@ -19,7 +19,7 @@ function get_fjelltur() {
                 let lowercase_fjelltur_navn = fjelltur_navn.toLowerCase()
                 let fjelltur_bilde_path = `/fjelltur/storage/images/fjelltur/${lowercase_fjelltur_navn}.jpg`
                 li.innerHTML = `
-                    <img class="fjell-bilde" src="${fjelltur_bilde_path}">
+                    <!--<img class="fjell-bilde" src="${fjelltur_bilde_path}">-->
                     <div class="fjell-informasjon">
                         <div class="fjell-navn">
                             <span>${fjelltur_navn}</span>
@@ -28,8 +28,8 @@ function get_fjelltur() {
                             <span>${fjelltur.beskrivelse}</span>
                         </div> <br>
                         <span>Dato: ${fjelltur.dato}</span> <br>
-                        <span>Fjell: ${fjelltur.fjell}</span>
-                        <span>Person: ${fjelltur.person}</span>
+                        <span>Fjell: ${fjelltur.fjellnavn}</span>
+                        <span>Person: ${fjelltur.brukernavn}</span>
                     </div>
                 `;
                 fjelltur_liste.appendChild(li);

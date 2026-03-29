@@ -27,7 +27,7 @@ html {
     }
 }
 
-#fjell-liste li {
+.liste li {
     border: 1px solid #d2d3db;
     box-shadow: 0 0 3px #d2d3db;
     padding: 20px;

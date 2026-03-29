@@ -38,6 +38,6 @@ insert into fjelltur (navn, beskrivelse, dato, person, fjell) values (
 * [W3Schools SQL Insert Into Select](https://www.w3schools.com/SQL/sql_insert_into_select.asp)
 
 ## Min KI bruk i dette prosjektet
-Jeg skriver her hva jeg har brukt av KI for å hjelpe meg å svare på oppgaven.
+Jeg skriver her hva jeg har brukt av KI for å hjelpe meg å svare på oppgaven. Jeg har ikke, og kommer ikke til å bruke KI til å skrive kode for meg, da jeg føler at dette ikke er en særlig smart måte å gjøre ting på. Du får ingen erfaring i å faktisk skrive ting selv, og du får ikke den samme 'dopamin hitten' du får når ting du har skrevet selv funker. **Men, vær så snill les chattene - jeg brukte lang tid på de jævla promptene 😭**
 * Jeg spurte Gemini hva den synes om å lagre bilder som BLOBs i databasen vs. å lagre dem som filer og ha filepaths i databasen. Bestemte meg for å spørre KI om hva den synes etter jeg hadde spurt både Hilde, min far og vært lenge inne på mange forskjellige innlegg på StackOverflow og Reddit. [Link til chat](https://gemini.google.com/share/d3f6ee9c7e54)
-* Jeg spurte Gemini hva den synes om filstrukturen min, og ga den mine meninger og argumenter for det jeg allerede hadde for å prøve å få mer ordentlig informasjon. [Les chatten.](https://gemini.google.com/share/359b91e1b416)
+* Jeg spurte Gemini hva den synes om filstrukturen min, og ga den mine meninger og argumenter for det jeg allerede hadde for å prøve å få mer ordentlig informasjon. [Les chatten.](https://gemini.google.com/share/4dbcfb0669d4)

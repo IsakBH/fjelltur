@@ -26,9 +26,9 @@ function get_fjelltur() {
                         <div class="fjell-beskrivelse">
                             <span>${fjelltur.beskrivelse}</span>
                         </div> <br>
-                        <span>Dato: ${fjelltur.dato}</span> <br>
-                        <span>Fjell: ${fjelltur.fjellnavn}</span>
-                        <span>Person: ${fjelltur.brukernavn}</span>
+                        <span><b class="mini-header">Dato:</b> ${fjelltur.dato}</span> <br>
+                        <span><b class="mini-header">Fjell:</b> ${fjelltur.fjellnavn}</span> <br>
+                        <span><b class="mini-header">Person:</b> ${fjelltur.brukernavn}</span>
                     </div>
                 `;
                 fjelltur_liste.appendChild(li);

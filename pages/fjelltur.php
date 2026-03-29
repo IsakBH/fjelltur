@@ -37,6 +37,6 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         </div>
 
         <!--<script src="../scripts/get_fjell.js"></script>-->
-        <script src="/scripts/get_fjelltur.js"></script>
+        <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
     </body>
 </html>

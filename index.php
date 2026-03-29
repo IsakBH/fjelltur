@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "database.php";
+require_once "config/database.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
@@ -11,8 +11,8 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
     <head>
         <title>Fjell</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="styles/styling.css" />
-        <link rel="stylesheet" href="styles/sidebar.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/styling.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/sidebar.css" />
         <link rel="icon" href="storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->
@@ -27,7 +27,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
     <body>
         <!-- Sidebaren -->
         <?php
-        include("./storage/includes/sidebar.php");
+        include("storage/includes/sidebar.php");
         ?>
 
         <div id="fjell-display" class="display">
@@ -36,6 +36,6 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             </div>
         </div>
 
-        <script src="scripts/get_fjell.js"></script>
+        <script src="scripts/js/get_fjell.js"></script>
     </body>
 </html>

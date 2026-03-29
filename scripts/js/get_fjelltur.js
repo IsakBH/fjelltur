@@ -2,7 +2,7 @@ const fjelltur_display = document.getElementById('fjell-display');
 
 function get_fjelltur() {
     console.log("Henter liste over fjellturer...")
-    fetch("/fjelltur/scripts/get_fjellturer.php")
+    fetch("/fjelltur/scripts/actions/get_fjellturer.php")
         .then(response => response.json())
         .then(fjell => {
             console.log(`Informasjon om fjell mottatt!`);

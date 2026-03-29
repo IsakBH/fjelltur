@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../database.php";
+require_once dirname(__DIR__, 2) . "/fjelltur/config/database.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')

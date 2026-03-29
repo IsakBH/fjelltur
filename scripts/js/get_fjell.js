@@ -27,8 +27,8 @@ function get_fjell() {
                         <div class="fjell-beskrivelse">
                             <span>${fjellet.beskrivelse}</span>
                         </div> <br>
-                        <span>Høyde: ${fjellet.hoyde} meter</span> <br>
-                        <span>Region: ${fjellet.omradenavn}</span>
+                        <span><b class="mini-header">Høyde:</b> ${fjellet.hoyde} meter</span> <br>
+                        <span><b class="mini-header">Region:</b> ${fjellet.omradenavn}</span>
                     </div>
                 `;
                 fjell_liste.appendChild(li);

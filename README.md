@@ -6,7 +6,9 @@
 > Databasefilen (mysql .sql fil) ligger i storage/database/fjell.sql.
 
 # Bilde av databasemodellen fra MySQL Workbench
-Denne er litt utdatert. Hvis du ser på fjelltur tabellen, så ser du at beskrivelse kolonnen der er en int, som den ikke skal være. Nå er det en varchar. Jeg har også gjort beskrivelse kolonnen i fjell tabellen større, fordi det ble litt knapt med 120 chars. Annet enn disse endringene, er dette diagrammet nøyaktig slik databasen ser ut nå.
+**Endringer jeg har gjort etter dette diagrammet ble tegnet:**
+* *Beskrivelse* kolonnen i fjelltur tabellen er nå en varchar og ikke en int - gjorde en liten feil når jeg først satt det opp
+* Utvidet *beskrivelse* kolonnen i fjell tabellen til å være 250 chars lang istedet for 120 - ble litt knapt med kun 120 chars
 
 <img width="1089" height="576" alt="image" src="https://github.com/user-attachments/assets/02d5a82b-e447-4f5d-b11d-c5e9e67514e6" />
 

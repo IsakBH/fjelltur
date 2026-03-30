@@ -26,6 +26,7 @@ if(isset($_GET['code'])) {
         $token_data = $client->verifyIdToken($token['id_token']);
         $client->setAccessToken($_SESSION['id_token_token']);
         print_r(array_keys($token_data));
+        echo "<br> <br>";
         echo $token_data['name'];
         echo "<img src='{$token_data['picture']}'>";
     }

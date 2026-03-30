@@ -5,7 +5,6 @@ https://github.com/googleapis/google-api-php-client/blob/main/examples/idtoken.p
 */
 
 session_start();
-
 require_once dirname(__DIR__, 2) . "/config/database.php";
 require_once dirname(__DIR__, 2) . "/vendor/autoload.php";
 
@@ -29,14 +28,31 @@ if(isset($_GET['code'])) {
         echo "<br> <br>";
         echo $token_data['name'];
         echo "<img src='{$token_data['picture']}'>";
+        $username = $token_data['name'];
+        $email = $token_data['email'];
+        $profilepicture = $token_data['picture'];
+        $oauthprovider = "Google";
+        $oauth_uid = $token_data['sub'];
+
+        $sql = "SELECT * FROM person WHERE oauth_uid = ? AND oauth_provider = 'google';";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("s", $token_data['sub']);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        // hvis resultatet fra sql queryen var tom, så betyr jo det at brukeren ikke finnes og at den må opprettes i databasen
+        if($result->num_rows == 0){
+            $sql = "INSERT INTO person (brukernavn, epost, profilbilde, oauth_provider, oauth_uid) VALUES (?, ?, ?, ?, ?);";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param("sssss", $username, $email, $profilepicture, $oauthprovider, $oauth_uid);
+            $stmt->execute();
+        }
     }
 
     else { // hvis id_token_token IKKE er satt,
         $_SESSION['code_verifier'] = $client->getOAuth2Service()->generateCodeVerifier();
         $authUrl = $client->createAuthUrl();
     }
-
-
 
     /*header('Location: ../fjelltur.php');
     exit;*/

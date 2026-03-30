@@ -57,7 +57,7 @@ if(isset($_GET['code'])) {
                 'profilepicture' => $profilepicture,
             ];
 
-            header('Location: ../../index.php');
+            header('Location: ../profil.php');
         }
         else { // hvis id_token_token IKKE er satt,
             $_SESSION['code_verifier'] = $client->getOAuth2Service()->generateCodeVerifier();

@@ -4,6 +4,8 @@ require_once dirname(__DIR__, 2) . "/fjelltur/config/database.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
+
+$user = $_SESSION['user'];
 ?>
 
 <!DOCTYPE html>
@@ -30,12 +32,9 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         include("../storage/includes/sidebar.php");
         ?>
 
-        <div id="fjell-display">
-            <div id="fjell-liste">
-                <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->
-            </div>
+        <div id="profile-container">
+            <h2><?php echo $user['name']; ?></h2>
         </div>
 
-        <!--<script src="../scripts/get_fjell.js"></script>-->
     </body>
 </html>

@@ -47,9 +47,11 @@ if(isset($_GET['code'])) {
                 $stmt = $mysqli->prepare($sql);
                 $stmt->bind_param("sssss", $username, $email, $profilepicture, $oauthprovider, $oauth_uid);
                 $stmt->execute();
+                $user_id = $mysqli->insert_id;
             }
 
             $_SESSION['user'] = [
+                'id' => $user_id,
                 'name' => $username,
                 'email' => $email,
                 'profilepicture' => $profilepicture,

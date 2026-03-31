@@ -34,6 +34,8 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             <div id="fjelltur-liste" class="liste">
                 <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->
             </div>
+
+            <button class="ny-knapp" id="ny-fjelltur"><i class="fa-solid fa-plus"></i> Registrer ny fjelltur</button>
         </div>
 
         <!--<script src="../scripts/get_fjell.js"></script>-->

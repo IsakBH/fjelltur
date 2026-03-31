@@ -68,3 +68,16 @@ html {
 .mini-header {
     color: #1b1c2e;
 }
+
+.ny-knapp {
+    height: 50px;
+    width: 160px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #b8bbf5;
+    font-size: 0.9rem;
+}

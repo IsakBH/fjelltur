@@ -6,7 +6,8 @@ require_once dirname(__DIR__, 2) . "/config/database.php";
 <html>
     <head>
         <title>Login</title>
-        <link rel="stylesheet" href="../../styles/oauth.css">
+        <link rel="stylesheet" href="/fjelltur/styles/oauth.css">
+        <link rel="stylesheet" href="/fjelltur/styles/variables.css" />
     </head>
     <body>
         <h2>Logg inn med Google</h2>

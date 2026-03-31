@@ -13,6 +13,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="/fjelltur/styles/styling.css" />
         <link rel="stylesheet" href="/fjelltur/styles/sidebar.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/variables.css" />
         <link rel="icon" href="storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->

@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: var(--primary-hover-color);
+    color: #e4e5f1;
+}
+
 html {
     font-family: Roboto;
 }

@@ -16,6 +16,7 @@ $user = $_SESSION['user'];
         <link rel="stylesheet" href="../styles/styling.css" />
         <link rel="stylesheet" href="../styles/sidebar.css" />
         <link rel="stylesheet" href="../styles/profil.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/variables.css" />
         <link rel="icon" href="../storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->

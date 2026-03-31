@@ -40,6 +40,8 @@ if(isset($_GET['code'])) {
             $stmt->bind_param("s", $token_data['sub']);
             $stmt->execute();
             $result = $stmt->get_result();
+            $rows = $result->fetch_array();
+            $user_id = $rows['id'];
 
             // hvis resultatet fra sql queryen var tom, så betyr jo det at brukeren ikke finnes og at den må opprettes i databasen
             if($result->num_rows == 0){

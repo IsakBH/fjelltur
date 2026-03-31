@@ -35,10 +35,19 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                 <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->
             </div>
 
-            <button class="ny-knapp" id="ny-fjelltur"><i class="fa-solid fa-plus"></i> Registrer ny fjelltur</button>
+            <button class="ny-knapp" id="ny-fjelltur" onclick="open_new_hike()"><i class="fa-solid fa-plus"></i> Registrer ny fjelltur</button>
         </div>
+
+        <!--Ny fjelltur popup-->
+        <dialog id="ny-fjelltur-dialog">
+            <h2>Registrer ny fjelltur</h2>
+            <div id="ny-fjelltur">
+                <button id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>
+        </dialog>
 
         <!--<script src="../scripts/get_fjell.js"></script>-->
         <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
+        <script src="/fjelltur/scripts/js/ny_fjelltur.js"></script>
     </body>
 </html>

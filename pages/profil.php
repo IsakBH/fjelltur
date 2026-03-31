@@ -15,6 +15,7 @@ $user = $_SESSION['user'];
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="../styles/styling.css" />
         <link rel="stylesheet" href="../styles/sidebar.css" />
+        <link rel="stylesheet" href="../styles/profil.css" />
         <link rel="icon" href="../storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->
@@ -33,7 +34,8 @@ $user = $_SESSION['user'];
         ?>
 
         <div id="profile-container">
-            <h2><?php echo $user['name']; ?></h2>
+            <img id="profilbilde" src="<?php echo $user['profilepicture']; ?>">
+            <h1><?php echo $user['name']; ?></h1>
         </div>
 
     </body>

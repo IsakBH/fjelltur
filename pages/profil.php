@@ -4,6 +4,8 @@ require_once dirname(__DIR__, 2) . "/fjelltur/config/database.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
+
+$user = $_SESSION['user'];
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +15,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="../styles/styling.css" />
         <link rel="stylesheet" href="../styles/sidebar.css" />
+        <link rel="stylesheet" href="../styles/profil.css" />
         <link rel="icon" href="../storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->
@@ -30,12 +33,13 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         include("../storage/includes/sidebar.php");
         ?>
 
-        <div id="fjell-display">
-            <div id="fjell-liste">
-                <!-- Hei, dette er Isak Brun som snakker. Alt inni denne diven blir fylt inn av Javascripten. -->
-            </div>
+        <div id="profile-container">
+            <img id="profilbilde" src="<?php echo $user['profilepicture']; ?>">
+            <h1><?php echo $user['name']; ?></h1>
+            <a href="auth/logout.php">
+                <button>Logg ut</button>
+            </a>
         </div>
 
-        <!--<script src="../scripts/get_fjell.js"></script>-->
     </body>
 </html>

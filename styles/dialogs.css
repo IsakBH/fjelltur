@@ -1,0 +1,47 @@
+/*The dialog itself*/
+dialog {
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    filter: drop-shadow(0 0 15px black);
+    padding: 30px;
+    /*background: rgba(29, 29, 29, 0.30);*/
+    background: #1D1D1D;
+    color: #fafafa;
+    backdrop-filter: blur(24px);
+    width: 60%;
+    height: 80%;
+}
+
+/*Dims the background and stuff so the focus is on settings yk*/
+dialog::backdrop {
+    background-color: rgba(67, 67, 67, 0.4);
+}
+
+/*Buttons in the dialog*/
+dialog button {
+    width: 100px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#close-dialog-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fafafa;
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+    height: auto;
+    background-color: var(--gradient-color-1);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    &:hover {
+        background-color: var(--primary-hover-color);
+    }
+    &:active {
+        background-color: var(--secondary-hover-color);
+    }
+}

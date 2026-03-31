@@ -14,6 +14,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         <link rel="stylesheet" href="../styles/styling.css" />
         <link rel="stylesheet" href="../styles/sidebar.css" />
         <link rel="stylesheet" href="/fjelltur/styles/dialogs.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/variables.css" />
         <link rel="icon" href="../storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->

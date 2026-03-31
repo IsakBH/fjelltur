@@ -5,9 +5,8 @@ dialog {
     border: none;
     filter: drop-shadow(0 0 15px black);
     padding: 30px;
-    /*background: rgba(29, 29, 29, 0.30);*/
-    background: #1D1D1D;
-    color: #fafafa;
+    background: #d3d5e8;
+    color: #1b1c2e;
     backdrop-filter: blur(24px);
     width: 60%;
     height: 80%;
@@ -29,7 +28,7 @@ dialog button {
     position: absolute;
     top: 0;
     right: 0;
-    color: #fafafa;
+    color: #1b1c2e;
     margin: 10px;
     padding: 10px;
     width: fit-content;

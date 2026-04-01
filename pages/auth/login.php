@@ -8,6 +8,7 @@ require_once dirname(__DIR__, 2) . "/config/database.php";
         <title>Login</title>
         <link rel="stylesheet" href="/fjelltur/styles/oauth.css">
         <link rel="stylesheet" href="/fjelltur/styles/variables.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/login.css">
     </head>
     <body>
         <div id="login-container">

@@ -62,6 +62,11 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
                     <label>Dato</label> <br>
                     <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>">
+
+                    <br> <br>
+
+                    <label>Bilde thumbnail</label> <br>
+                    <input id="fjelltur-skjema-thumbnail" type="file">
                 </form>
             </div>
         </dialog>

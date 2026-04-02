@@ -43,6 +43,9 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
         <!--Ny fjelltur popup-->
         <dialog id="ny-fjelltur-dialog">
+            <?php
+            $current_date = date("Y-m-d");
+            ?>
             <h2>Registrer ny fjelltur</h2>
             <div id="ny-fjelltur">
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
@@ -53,7 +56,12 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                     <br> <br>
 
                     <label>Beskrivelse</label> <br>
-                    <input id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah...">
+                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..."></textarea>
+
+                    <br> <br>
+
+                    <label>Dato</label> <br>
+                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>">
                 </form>
             </div>
         </dialog>

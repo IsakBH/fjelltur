@@ -9,6 +9,7 @@
 
 html {
     font-family: Roboto;
+    background-color: #f4f5fa;
 }
 
 .display {
@@ -27,6 +28,7 @@ html {
     flex-wrap: wrap;
     padding: 20px;
     height: 100%;
+    background-color: #f4f5fa;
     &:last-child {
         margin-bottom: 40px;
     }

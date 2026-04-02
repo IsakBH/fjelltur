@@ -46,6 +46,15 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             <h2>Registrer ny fjelltur</h2>
             <div id="ny-fjelltur">
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
+                <form id="ny-fjelltur-skjema">
+                    <label>Navn</label> <br>
+                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Isak'">
+
+                    <br> <br>
+
+                    <label>Beskrivelse</label> <br>
+                    <input id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah...">
+                </form>
             </div>
         </dialog>
 

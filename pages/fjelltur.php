@@ -72,11 +72,11 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                     <br <br> <br>
 
                     <label>Fjell</label> <br>
-                    <select id="fjelltur-skjema-fjell" required>
+                    <select id="fjelltur-skjema-fjell" name="fjelltur-fjell" required>
                         <?php
                         foreach($result as $fjell){
                             $navn = $fjell['navn'];
-                            echo "<option value'$navn'>$navn</option>";
+                            echo "<option value='$navn'>$navn</option>";
                         }
                         ?>
                     </select>

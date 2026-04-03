@@ -1,8 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fjelltur_navn = $_POST['fjelltur-navn'];
+    $fjelltur_navn = htmlspecialchars($_POST['fjelltur-navn']);
     $fjelltur_navn_trimmed = preg_replace('/\s+/', '-', $fjelltur_navn);
     $fjelltur_beskrivelse = $_POST['fjelltur-beskrivelse'];
+    $fjelltur_fjell = $_POST['fjelltur-fjell'];
     $fjelltur_dato = $_POST['fjelltur-dato'];
 
     // thumbnail

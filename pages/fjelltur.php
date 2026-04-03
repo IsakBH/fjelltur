@@ -52,17 +52,17 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
                 <form id="ny-fjelltur-skjema" action="../scripts/actions/registrer_ny_tur.php" method="post">
                     <label>Navn</label> <br>
-                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'">
+                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn">
 
                     <br> <br>
 
                     <label>Beskrivelse</label> <br>
-                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..."></textarea>
+                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse"></textarea>
 
                     <br> <br>
 
                     <label>Dato</label> <br>
-                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>">
+                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato">
 
                     <br> <br>
 
@@ -88,7 +88,6 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             </div>
         </dialog>
 
-        <!--<script src="../scripts/get_fjell.js"></script>-->
         <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/ny_fjelltur.js"></script>
     </body>

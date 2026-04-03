@@ -2,6 +2,7 @@
 session_start();
 require_once dirname(__DIR__, 2) . "/fjelltur/config/database.php";
 require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/check_auth.php";
+require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/get_fjell.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
@@ -51,7 +52,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
                 <form id="ny-fjelltur-skjema">
                     <label>Navn</label> <br>
-                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Isak'">
+                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'">
 
                     <br> <br>
 
@@ -67,6 +68,10 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
                     <label>Bilde thumbnail</label> <br>
                     <input id="fjelltur-skjema-thumbnail" type="file">
+
+                    <br <br> <br>
+
+                    <label>Fjell</label> <br>
                 </form>
             </div>
         </dialog>

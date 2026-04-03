@@ -39,8 +39,10 @@ dialog button {
     font-size: 1.5rem;
     &:hover {
         background-color: var(--primary-hover-color);
+        cursor: pointer;
     }
     &:active {
         background-color: var(--secondary-hover-color);
+        cursor: grabbing;
     }
 }

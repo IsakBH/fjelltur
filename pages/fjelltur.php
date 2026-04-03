@@ -52,27 +52,27 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
                 <form id="ny-fjelltur-skjema" action="../scripts/actions/registrer_ny_tur.php" method="post">
                     <label>Navn</label> <br>
-                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn">
+                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn" required>
 
                     <br> <br>
 
                     <label>Beskrivelse</label> <br>
-                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse"></textarea>
+                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse" required></textarea>
 
                     <br> <br>
 
                     <label>Dato</label> <br>
-                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato">
+                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato" required>
 
                     <br> <br>
 
                     <label>Bilde thumbnail</label> <br>
-                    <input id="fjelltur-skjema-thumbnail" type="file" name="fjelltur-thumbnail">
+                    <input id="fjelltur-skjema-thumbnail" type="file" name="fjelltur-thumbnail" required>
 
                     <br <br> <br>
 
                     <label>Fjell</label> <br>
-                    <select id="fjelltur-skjema-fjell">
+                    <select id="fjelltur-skjema-fjell" required>
                         <?php
                         foreach($result as $fjell){
                             $navn = $fjell['navn'];

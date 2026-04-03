@@ -1,11 +1,13 @@
 <?php
+session_start();
+require_once dirname(__DIR__, 2) . "/config/database.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fjelltur_navn = htmlspecialchars($_POST['fjelltur-navn']);
     $fjelltur_navn_trimmed = preg_replace('/\s+/', '-', $fjelltur_navn);
     $fjelltur_beskrivelse = $_POST['fjelltur-beskrivelse'];
     $fjelltur_fjell = $_POST['fjelltur-fjell'];
     $fjelltur_dato = $_POST['fjelltur-dato'];
-    $user_id = $_SESSION['id'];
+    $user_id = $_SESSION['user']['id'];
 
     // thumbnail
     $fjelltur_thumbnail_filnavn = $fjelltur_navn_trimmed . "-" . $fjelltur_dato;
@@ -23,7 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sql = "insert into fjelltur (navn, beskrivelse, dato, thumbnail, person, fjell) values (?, ?, ?, ?, ?, ?)";
             $stmt = $mysqli->prepare($sql);
             $stmt->bind_param("ssssii", $fjelltur_navn, $fjelltur_beskrivelse, $fjelltur_dato, $new_filename, $user_id, $fjelltur_fjell);
-            $stmt->execute();
+            if($stmt->execute()){
+                echo "Jeg klarte det! Fjellturen er nå i databasen.";
+                header('Location: ../../pages/fjelltur.php');
+            } else {
+                echo "Jeg klarte ikke å legge til fjellturen din i databasen! NEIIIIIIIIII! Dette er ikke kult...";
+            }
 
         } else {
             echo "Upload av thumbnail FUNKET IKKE!!!! IKKE KULT!!!!!!!";

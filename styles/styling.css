@@ -79,7 +79,7 @@ html {
 .ny-knapp {
     height: 50px;
     width: 160px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     margin: 25px;

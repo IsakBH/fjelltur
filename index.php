@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once "config/database.php";
+require "scripts/actions/check_auth.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')

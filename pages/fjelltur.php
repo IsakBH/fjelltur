@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once dirname(__DIR__, 2) . "/fjelltur/config/database.php";
+require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/check_auth.php";
+require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/get_fjellnavn.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
@@ -42,13 +44,51 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
         <!--Ny fjelltur popup-->
         <dialog id="ny-fjelltur-dialog">
+            <?php
+            $current_date = date("Y-m-d");
+            ?>
             <h2>Registrer ny fjelltur</h2>
             <div id="ny-fjelltur">
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
+                <form id="ny-fjelltur-skjema" action="../scripts/actions/registrer_ny_tur.php" method="post" enctype="multipart/form-data">
+                    <label>Navn</label> <br>
+                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn" required>
+
+                    <br> <br>
+
+                    <label>Beskrivelse</label> <br>
+                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse" required></textarea>
+
+                    <br> <br>
+
+                    <label>Dato</label> <br>
+                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato" required>
+
+                    <br> <br>
+
+                    <label>Bilde thumbnail</label> <br>
+                    <input id="fjelltur-skjema-thumbnail" type="file" name="fjelltur-thumbnail" required>
+
+                    <br <br> <br>
+
+                    <label>Fjell</label> <br>
+                    <select id="fjelltur-skjema-fjell" name="fjelltur-fjell" required>
+                        <?php
+                        foreach($result as $fjell){
+                            $navn = $fjell['navn'];
+                            $id = $fjell['id'];
+                            echo "<option value='$id'>$navn</option>";
+                        }
+                        ?>
+                    </select>
+
+                    <br> <br>
+
+                    <input id="fjelltur-skjema-submit" type="submit" value="Registrer tur...">
+                </form>
             </div>
         </dialog>
 
-        <!--<script src="../scripts/get_fjell.js"></script>-->
         <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/ny_fjelltur.js"></script>
     </body>

@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fjelltur_beskrivelse = $_POST['fjelltur-beskrivelse'];
     $fjelltur_fjell = $_POST['fjelltur-fjell'];
     $fjelltur_dato = $_POST['fjelltur-dato'];
+    $user_id = $_SESSION['id'];
 
     // thumbnail
     $fjelltur_thumbnail_filnavn = $fjelltur_navn_trimmed . "-" . $fjelltur_dato;
@@ -16,6 +17,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (in_array($file_extension, $allowed)) {
         // lag random filnavn og last bildet opp til uploads
         $new_filename = $fjelltur_thumbnail_filnavn . "." .$file_extension;
-        move_uploaded_file($_FILES['fjelltur-thumbnail']['tmp_name'], '../../storage/images/thumbnails/' . $new_filename);
+        if(move_uploaded_file($_FILES['fjelltur-thumbnail']['tmp_name'], '../../storage/images/thumbnails/' . $new_filename)){
+            echo "Upload av thumbnailen funket dritfint! :D";
+
+            $sql = "insert into fjelltur (navn, beskrivelse, dato, thumbnail, person, fjell) values (?, ?, ?, ?, ?, ?)";
+            $stmt = $mysqli->prepare($sql);
+            $stmt->bind_param("ssssii", $fjelltur_navn, $fjelltur_beskrivelse, $fjelltur_dato, $new_filename, $user_id, $fjelltur_fjell);
+            $stmt->execute();
+
+        } else {
+            echo "Upload av thumbnail FUNKET IKKE!!!! IKKE KULT!!!!!!!";
+        }
     }
 }

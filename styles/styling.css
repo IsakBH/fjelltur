@@ -26,6 +26,7 @@ html {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+    column-count: 3;
     padding: 20px;
     height: 100%;
     background-color: #f4f5fa;
@@ -40,8 +41,8 @@ html {
     padding: 20px;
     border-radius: 10px;
     width: 100%;
-    max-width: 500px;
-    height: fit-content;
+    max-width: 450px;
+    height: 449px;
     background-color: #e4e5f1;
     color: #1b1c2e;
     padding: 0px;

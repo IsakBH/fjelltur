@@ -42,7 +42,8 @@ html {
     border-radius: 10px;
     width: 100%;
     max-width: 450px;
-    height: 449px;
+    height: fit-content;
+    min-height: 449px;
     background-color: #e4e5f1;
     color: #1b1c2e;
     padding: 0px;

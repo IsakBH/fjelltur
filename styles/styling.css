@@ -87,4 +87,13 @@ html {
     border: none;
     background-color: #b8bbf5;
     font-size: 0.9rem;
+    filter: drop-shadow(0px 3px 3px #b2b5d6);
+    color: #1b1c2e;
+    &:hover {
+        background-color: #c2c5df;
+        cursor: pointer;
+    }
+    &:active {
+        cursor: grabbing;
+    }
 }

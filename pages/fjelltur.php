@@ -2,7 +2,7 @@
 session_start();
 require_once dirname(__DIR__, 2) . "/fjelltur/config/database.php";
 require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/check_auth.php";
-require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/get_fjell.php";
+require_once dirname(__DIR__, 2) . "/fjelltur/scripts/actions/get_fjellnavn.php";
 
 $filepath = $_SERVER['PHP_SELF']; // henter filepathen (f.eks 'fjelltur/index.php') veldig tøft
 $filename = basename($filepath); // henter filnavnet fra filepathen den hentet tidligere (f.eks 'index.php')
@@ -72,6 +72,16 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                     <br <br> <br>
 
                     <label>Fjell</label> <br>
+                    <select id="fjelltur-skjema-fjell">
+                        <?php
+                        foreach($result as $fjell){
+                            $navn = $fjell['navn'];
+                            echo "<option value'$navn'>$navn</option>";
+                        }
+                        ?>
+                    </select>
+
+                    <input id="fjelltur-skjema-submit" type="submit">
                 </form>
             </div>
         </dialog>

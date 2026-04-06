@@ -10,7 +10,8 @@ select fjelltur.navn, fjelltur.beskrivelse, fjelltur.dato, fjelltur.thumbnail, p
 from fjelltur
 join person on fjelltur.person = person.id
 join fjell on fjelltur.fjell = fjell.id
-where fjelltur.person = ?;
+where fjelltur.person = ?
+order by fjelltur.dato desc;
 ";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $userid);

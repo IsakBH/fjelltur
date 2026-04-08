@@ -12,4 +12,4 @@ if ($mysqli->connect_error) {
 
 define('GOOGLE_CLIENT_ID', '');
 define('GOOGLE_CLIENT_SECRET', '');
-define('GOOGLE_REDIRECT_URI', 'http://localhost/fjelltur/pages/google-callback.php');
+define('GOOGLE_REDIRECT_URI', 'http://localhost/fjelltur/pages/auth/google-callback.php');

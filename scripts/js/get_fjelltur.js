@@ -9,6 +9,7 @@ function get_fjelltur() {
             const fjelltur_liste = document.getElementById('fjelltur-liste');
             fjelltur_liste.innerHTML = '';
 
+            console.log(fjellturer);
             fjellturer.forEach(fjelltur => {
                 let ny_fjell_lyd = new Audio("/fjelltur/storage/sounds/nyfjell.mp3");
                 ny_fjell_lyd.play();

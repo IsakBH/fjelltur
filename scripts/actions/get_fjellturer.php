@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once dirname(__DIR__, 2) . "/config/database.php"; // kobler til database
 
 $user = $_SESSION['user'];

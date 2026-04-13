@@ -55,6 +55,10 @@ html {
         transform: translateY(-5px);
         background-color: #d3d5e8;
         cursor: pointer;
+
+        .mini-action-button {
+            display: block;
+        }
     }
     span:hover {
         cursor: text;
@@ -112,8 +116,16 @@ html {
     padding: 10px;
     margin: 5px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid #d2d3db;
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
+    background-color: #d3d5e8;
+    &:hover {
+        background-color: #c2c5df;
+    }
+    &:active {
+        background-color: #b2b5d6;
+    }
 }

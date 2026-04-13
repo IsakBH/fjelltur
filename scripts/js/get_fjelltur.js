@@ -19,6 +19,9 @@ function get_fjelltur() {
                 let fjelltur_navn = fjelltur.navn;
                 let fjelltur_bilde_path = `/fjelltur/storage/images/thumbnails/${fjelltur.thumbnail}`;
                 li.innerHTML = `
+                    <div class="mini-header-div">
+                        <button class="mini-action-button"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </div>
                     <img class="fjell-bilde" src="${fjelltur_bilde_path}">
                     <div class="fjell-informasjon">
                         <div class="fjell-navn">

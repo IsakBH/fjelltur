@@ -50,6 +50,7 @@ html {
     margin: 10px;
     transition: 0.2s;
     overflow: hidden;
+    position: relative;
     &:hover {
         transform: translateY(-5px);
         background-color: #d3d5e8;
@@ -98,4 +99,21 @@ html {
     &:active {
         cursor: grabbing;
     }
+}
+
+.mini-action-div {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mini-action-button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

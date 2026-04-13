@@ -21,7 +21,7 @@ function get_fjelltur() {
                 li.innerHTML = `
                     <div class="mini-action-div">
                         <button class="mini-action-button" id="slett-fjelltur-knapp"><i class="fa-solid fa-trash-can"></i></button>
-                        <button class="mini-action-button" id="rediger-fjelltur-knapp"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="mini-action-button" id="rediger-fjelltur-knapp" onclick="open_rediger_fjelltur(${fjelltur.id})"><i class="fa-solid fa-pen-to-square"></i></button>
                     </div>
                     <img class="fjell-bilde" src="${fjelltur_bilde_path}">
                     <div class="fjell-informasjon">

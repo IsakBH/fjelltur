@@ -48,7 +48,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             $current_date = date("Y-m-d");
             ?>
             <h2>Rediger fjelltur</h2>
-            <div id="ny-fjelltur">
+            <div id="rediger-fjelltur">
                 <button class="close-dialog-button" id="close-edit-fjelltur-dialog" onclick="close_fjelltur_edit()"><i class="fa-regular fa-circle-xmark"></i></button>
                 <form id="rediger-fjelltur-skjema" action="../scripts/actions/rediger_fjelltur.php" method="post" enctype="multipart/form-data">
                     <label>Navn</label> <br>
@@ -84,7 +84,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
                     <br> <br>
 
-                    <input id="fjelltur-skjema-submit" type="submit" value="Registrer tur...">
+                    <input id="rediger-fjelltur-skjema-submit" type="submit" value="Registrer tur...">
                 </form>
             </div>
         </dialog>

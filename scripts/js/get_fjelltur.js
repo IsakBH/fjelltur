@@ -11,13 +11,13 @@ function get_fjelltur() {
 
             console.log(fjellturer);
             fjellturer.forEach(fjelltur => {
-                let ny_fjell_lyd = new Audio("/fjelltur/storage/sounds/nyfjell.mp3");
+                const ny_fjell_lyd = new Audio("/fjelltur/storage/sounds/nyfjell.mp3");
                 ny_fjell_lyd.play();
                 console.log(`Hei. Jeg har informasjon om denne fjellturen: ${fjelltur.navn}`);
                 console.log(fjelltur);
                 const li = document.createElement('li');
-                let fjelltur_navn = fjelltur.navn;
-                let fjelltur_bilde_path = `/fjelltur/storage/images/thumbnails/${fjelltur.thumbnail}`;
+                const fjelltur_navn = fjelltur.navn;
+                const fjelltur_bilde_path = `/fjelltur/storage/images/thumbnails/${fjelltur.thumbnail}`;
                 li.innerHTML = `
                     <div class="mini-action-div">
                         <button class="mini-action-button" id="slett-fjelltur-knapp"><i class="fa-solid fa-trash-can"></i></button>

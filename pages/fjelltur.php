@@ -42,6 +42,11 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             <button class="ny-knapp" id="ny-fjelltur" onclick="open_new_hike()"><i class="fa-solid fa-plus"></i> Registrer ny fjelltur</button>
         </div>
 
+        <!-- Rediger fjelltur popup -->
+        <dialog id="rediger-fjelltur-dialog">
+            <h2>Rediger </h2>
+        </dialog>
+
         <!--Ny fjelltur popup-->
         <dialog id="ny-fjelltur-dialog">
             <?php

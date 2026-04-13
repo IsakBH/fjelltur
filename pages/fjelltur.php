@@ -44,7 +44,49 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
         <!-- Rediger fjelltur popup -->
         <dialog id="rediger-fjelltur-dialog">
-            <h2>Rediger </h2>
+            <?php
+            $current_date = date("Y-m-d");
+            ?>
+            <h2>Rediger fjelltur</h2>
+            <div id="ny-fjelltur">
+                <button class="close-dialog-button" id="close-edit-fjelltur-dialog" onclick="close_fjelltur_edit()"><i class="fa-regular fa-circle-xmark"></i></button>
+                <form id="rediger-fjelltur-skjema" action="../scripts/actions/rediger_fjelltur.php" method="post" enctype="multipart/form-data">
+                    <label>Navn</label> <br>
+                    <input id="rediger-fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn">
+
+                    <br> <br>
+
+                    <label>Beskrivelse</label> <br>
+                    <textarea id="rediger-fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse"></textarea>
+
+                    <br> <br>
+
+                    <label>Dato</label> <br>
+                    <input id="rediger-fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato">
+
+                    <br> <br>
+
+                    <label>Bilde thumbnail</label> <br>
+                    <input id="rediger-fjelltur-skjema-thumbnail" type="file" name="fjelltur-thumbnail">
+
+                    <br <br> <br>
+
+                    <label>Fjell</label> <br>
+                    <select id="rediger-fjelltur-skjema-fjell" name="fjelltur-fjell">
+                        <?php
+                        foreach($result as $fjell){
+                            $navn = $fjell['navn'];
+                            $id = $fjell['id'];
+                            echo "<option value='$id'>$navn</option>";
+                        }
+                        ?>
+                    </select>
+
+                    <br> <br>
+
+                    <input id="fjelltur-skjema-submit" type="submit" value="Registrer tur...">
+                </form>
+            </div>
         </dialog>
 
         <!--Ny fjelltur popup-->

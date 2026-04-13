@@ -5,6 +5,6 @@ function open_rediger_fjelltur(id) {
     edit_fjelltur_dialog.showModal();
 }
 
-function close_fjelltur() {
+function close_fjelltur_edit() {
     edit_fjelltur_dialog.close();
 }

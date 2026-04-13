@@ -117,9 +117,6 @@ html {
     margin: 5px;
     border-radius: 10px;
     border: 1px solid #d2d3db;
-    position: absolute;
-    top: 0;
-    right: 0;
     display: none;
     background-color: #d3d5e8;
     &:hover {

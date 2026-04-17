@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fjelltur_dato = $_POST['fjelltur-dato'];
     $user = $_SESSION['user'];
     $user_id = $user['id'];
+    $fjelltur_id = $_POST['rediger-fjelltur-fjelltur-id'];
 
     // thumbnail
     $fjelltur_thumbnail_filnavn = $fjelltur_navn_trimmed . "-" . $fjelltur_dato;
@@ -25,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $sql = "update fjelltur set navn = ?, beskrivelse = ?, dato = ?, fjell = ? where id = ?;";
             $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param("sssii", $fjelltur_navn, $fjelltur_beskrivelse, $fjelltur_dato, $fjelltur_fjell, $user_id);
+            $stmt->bind_param("sssii", $fjelltur_navn, $fjelltur_beskrivelse, $fjelltur_dato, $fjelltur_fjell, $fjelltur_id);
             if($stmt->execute()){
                 echo "Jeg klarte det! Fjellturen er nå i databasen. <br>";
                 var_dump($fjelltur_navn);

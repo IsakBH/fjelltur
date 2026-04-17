@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $sql = "update fjelltur set navn = ?, beskrivelse = ?, dato = ?, fjell = ? where id = ?;";
             $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param("sssii", $fjelltur_navn, $fjelltur_beskrivelse, $fjelltur_dato, $new_filename, $user_id, $fjelltur_fjell);
+            $stmt->bind_param("sssii", $fjelltur_navn, $fjelltur_beskrivelse, $fjelltur_dato, $fjelltur_fjell, $user_id);
             if($stmt->execute()){
                 echo "Jeg klarte det! Fjellturen er nå i databasen.";
                 header('Location: ../../pages/fjelltur.php');

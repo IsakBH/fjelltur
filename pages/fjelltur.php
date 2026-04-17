@@ -76,7 +76,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                         <?php
                         foreach($result as $fjell){
                             $navn = $fjell['navn'];
-                            $id = $fjell['id'];
+                            $id = (int)$fjell['id'];
                             echo "<option value='$id'>$navn</option>";
                         }
                         ?>

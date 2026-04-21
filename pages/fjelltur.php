@@ -42,6 +42,55 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             <button class="ny-knapp" id="ny-fjelltur" onclick="open_new_hike()"><i class="fa-solid fa-plus"></i> Registrer ny fjelltur</button>
         </div>
 
+        <!-- Rediger fjelltur popup -->
+        <dialog id="rediger-fjelltur-dialog">
+            <?php
+            $current_date = date("Y-m-d");
+            ?>
+            <h2 id="rediger-fjelltur-tittel">Rediger fjelltur</h2>
+            <div id="rediger-fjelltur">
+                <button class="close-dialog-button" id="close-edit-fjelltur-dialog" onclick="close_fjelltur_edit()"><i class="fa-regular fa-circle-xmark"></i></button>
+                <form id="rediger-fjelltur-skjema" action="../scripts/actions/rediger_fjelltur.php" method="post" enctype="multipart/form-data">
+                    <label>Navn</label> <br>
+                    <input id="rediger-fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn">
+
+                    <br> <br>
+
+                    <label>Beskrivelse</label> <br>
+                    <textarea id="rediger-fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse"></textarea>
+
+                    <br> <br>
+
+                    <label>Dato</label> <br>
+                    <input id="rediger-fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato">
+
+                    <br> <br>
+
+                    <label>Bilde thumbnail</label> <br>
+                    <input id="rediger-fjelltur-skjema-thumbnail" type="file" name="fjelltur-thumbnail">
+
+                    <br <br> <br>
+
+                    <label>Fjell</label> <br>
+                    <select id="rediger-fjelltur-skjema-fjell" name="fjelltur-fjell">
+                        <?php
+                        foreach($result as $fjell){
+                            $navn = $fjell['navn'];
+                            $id = (int)$fjell['id'];
+                            echo "<option value='$id'>$navn</option>";
+                        }
+                        ?>
+                    </select>
+
+                    <br> <br>
+
+                    <input id="rediger-fjelltur-skjema-tur-id" name="rediger-fjelltur-fjelltur-id" type="text" hidden>
+
+                    <input id="rediger-fjelltur-skjema-submit" type="submit" value="Registrer tur...">
+                </form>
+            </div>
+        </dialog>
+
         <!--Ny fjelltur popup-->
         <dialog id="ny-fjelltur-dialog">
             <?php
@@ -91,5 +140,6 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
         <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/ny_fjelltur.js"></script>
+        <script src="/fjelltur/scripts/js/rediger_fjelltur.js"></script>
     </body>
 </html>

@@ -6,8 +6,8 @@ const rediger_fjelltur_fjelltur_dato = document.getElementById('rediger-fjelltur
 const rediger_fjelltur_fjelltur_fjell = document.getElementById('rediger-fjelltur-skjema-fjell');
 
 
-function open_rediger_fjelltur(id, navn, beskrivelse, dato, thumbnail, fjell) {
-    fjelltur_info = {id, navn, beskrivelse, dato, thumbnail, fjell}
+function open_rediger_fjelltur(id, navn, beskrivelse, dato, thumbnail, fjellid, fjellnavn) {
+    fjelltur_info = {id, navn, beskrivelse, dato, thumbnail, fjellid, fjellnavn}
     console.log(`Bruker har åpnet dialogen for å redigere en eksisterende fjelltur.`);
     console.log(fjelltur_info);
     edit_fjelltur_dialog.showModal();
@@ -17,7 +17,7 @@ function open_rediger_fjelltur(id, navn, beskrivelse, dato, thumbnail, fjell) {
     rediger_fjelltur_fjelltur_navn.value = navn;
     rediger_fjelltur_fjelltur_beskrivelse.value = beskrivelse;
     rediger_fjelltur_fjelltur_dato.value = dato;
-    rediger_fjelltur_fjelltur_fjell.value = fjell;
+    rediger_fjelltur_fjelltur_fjell.value = fjellid;
 
 }
 

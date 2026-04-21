@@ -20,6 +20,7 @@ function get_fjelltur() {
                 const fjelltur_navn = fjelltur.navn;
                 const fjelltur_beskrivelse = fjelltur.beskrivelse;
                 const fjelltur_dato = fjelltur.dato;
+                const fjelltur_fjellid = fjelltur.fjellid;
                 const fjelltur_fjellnavn = fjelltur.fjellnavn;
                 const fjelltur_brukernavn = fjelltur.brukernavn;
                 const fjelltur_bilde_path = `/fjelltur/storage/images/thumbnails/${fjelltur.thumbnail}`;
@@ -33,6 +34,7 @@ function get_fjelltur() {
                                 '${fjelltur_beskrivelse}',
                                 '${fjelltur_dato}',
                                 '${fjelltur_bilde_path}',
+                                '${fjelltur_fjellid}',
                                 '${fjelltur_fjellnavn}'
                             )">
                             <i class="fa-solid fa-pen-to-square"></i>

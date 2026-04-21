@@ -4,6 +4,7 @@ const rediger_fjelltur_fjelltur_navn = document.getElementById('rediger-fjelltur
 const rediger_fjelltur_fjelltur_beskrivelse = document.getElementById('rediger-fjelltur-skjema-beskrivelse');
 const rediger_fjelltur_fjelltur_dato = document.getElementById('rediger-fjelltur-skjema-dato');
 const rediger_fjelltur_fjelltur_fjell = document.getElementById('rediger-fjelltur-skjema-fjell');
+const rediger_fjelltur_tittel = document.getElementById('rediger-fjelltur-tittel');
 
 
 function open_rediger_fjelltur(id, navn, beskrivelse, dato, thumbnail, fjellid, fjellnavn) {
@@ -18,6 +19,7 @@ function open_rediger_fjelltur(id, navn, beskrivelse, dato, thumbnail, fjellid, 
     rediger_fjelltur_fjelltur_beskrivelse.value = beskrivelse;
     rediger_fjelltur_fjelltur_dato.value = dato;
     rediger_fjelltur_fjelltur_fjell.value = fjellid;
+    rediger_fjelltur_tittel.innerHTML = "Rediger " + navn;
 
 }
 

@@ -14,13 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fjelltur_dato = $_POST['fjelltur-dato'];
     $fjelltur_id = $_POST['rediger-fjelltur-fjelltur-id'];
 
-    // thumbnail
-    $fjelltur_thumbnail_filnavn = $fjelltur_navn_trimmed . "-" . $fjelltur_dato;
-    $filename = $_FILES['fjelltur-thumbnail']['name'];
-    $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-
     if ($_FILES['fjelltur-thumbnail']['error'] === UPLOAD_ERR_OK) {
-        if (in_array($file_extension, $allowed)) {
+        // thumbnail
+        $fjelltur_thumbnail_filnavn = $fjelltur_navn_trimmed . "-" . $fjelltur_dato;
+        $filename = $_FILES['fjelltur-thumbnail']['name'];
+        $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+        if (in_array($file_extension, $allowed)){
             // lag random filnavn og last bildet opp til uploads
             $new_filename = $fjelltur_thumbnail_filnavn . "." . $file_extension;
             if (move_uploaded_file($_FILES['fjelltur-thumbnail']['tmp_name'], '../../storage/images/thumbnails/' . $new_filename)) {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
             else {
-                echo "Upload av thumbnail FUNKET IKKE!!!! IKKE KULT!!!!!!!";
+                echo "Filen du lastet opp er ikke i riktig filtype..";
             }
         }
     }

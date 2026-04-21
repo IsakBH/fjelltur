@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $filename = $_FILES['fjelltur-thumbnail']['name'];
     $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
-    if ($_FILES['fjelltur-thumbnail']) {
+    if ($_FILES['fjelltur-thumbnail']['error'] === UPLOAD_ERR_OK) {
         if (in_array($file_extension, $allowed)) {
             // lag random filnavn og last bildet opp til uploads
             $new_filename = $fjelltur_thumbnail_filnavn . "." . $file_extension;

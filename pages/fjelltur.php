@@ -146,5 +146,6 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/ny_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/rediger_fjelltur.js"></script>
+        <script src="/fjelltur/scripts/js/slett_fjelltur.js"></script>
     </body>
 </html>

@@ -26,7 +26,7 @@ function get_fjelltur() {
                 const fjelltur_bilde_path = `/fjelltur/storage/images/thumbnails/${fjelltur.thumbnail}`;
                 li.innerHTML = `
                     <div class="mini-action-div">
-                        <button class="mini-action-button" id="slett-fjelltur-knapp"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="mini-action-button" id="slett-fjelltur-knapp" onclick="slett_fjelltur()"><i class="fa-solid fa-trash-can"></i></button>
                         <button class="mini-action-button" id="rediger-fjelltur-knapp"
                             onclick="open_rediger_fjelltur(
                                 ${fjelltur_id},

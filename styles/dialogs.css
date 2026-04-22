@@ -68,6 +68,7 @@ dialog button {
     color: #460809;
     border-radius: 10px;
     border: none;
+    font-size: 4rem;
     &:hover {
         background-color: #d84545;
     }

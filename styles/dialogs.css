@@ -51,6 +51,7 @@ dialog button {
     width: 300px;
     height: 300px;
     padding: 0;
+    background-color: #ff7b7b;
 }
 
 #slett-fjelltur-dialog-knapp {
@@ -63,4 +64,14 @@ dialog button {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+    background-color: #ff5252;
+    color: #460809;
+    border-radius: 10px;
+    border: none;
+    &:hover {
+        background-color: #d84545;
+    }
+    &:active {
+        background-color: #cc4141;
+    }
 }

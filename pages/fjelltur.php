@@ -42,6 +42,14 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
             <button class="ny-knapp" id="ny-fjelltur" onclick="open_new_hike()"><i class="fa-solid fa-plus"></i> Registrer ny fjelltur</button>
         </div>
 
+        <!-- Slett fjelltur popup -->
+        <dialog id="slett-fjelltur-dialog">
+            <form id="slett-fjelltur-skjema" action="../scripts/actions/slett_fjelltur.php" method="post">
+                <input id="slett-fjelltur-id" name="slett-fjelltur-id" type="text" hidden>
+                <button id="slett-fjelltur-dialog-knapp" type="submit"><i class="fa-solid fa-trash-can"></i></button>
+            </form>
+        </dialog>
+
         <!-- Rediger fjelltur popup -->
         <dialog id="rediger-fjelltur-dialog">
             <?php
@@ -141,5 +149,6 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         <script src="/fjelltur/scripts/js/get_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/ny_fjelltur.js"></script>
         <script src="/fjelltur/scripts/js/rediger_fjelltur.js"></script>
+        <script src="/fjelltur/scripts/js/slett_fjelltur.js"></script>
     </body>
 </html>

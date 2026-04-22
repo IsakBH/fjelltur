@@ -44,7 +44,10 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
         <!-- Slett fjelltur popup -->
         <dialog id="slett-fjelltur-dialog">
-            <button id="slett-fjelltur-dialog-knapp"><i class="fa-solid fa-trash-can"></i</button>
+            <form id="slett-fjelltur-skjema" action="../scripts/actions/slett_fjelltur.php" method="post">
+                <input id="slett-fjelltur-id" name="slett-fjelltur-id" type="text" hidden>
+                <button id="slett-fjelltur-dialog-knapp" type="submit"><i class="fa-solid fa-trash-can"></i</button>
+            </form>
         </dialog>
 
         <!-- Rediger fjelltur popup -->

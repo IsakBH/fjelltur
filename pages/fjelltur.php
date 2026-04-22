@@ -44,7 +44,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
         <!-- Slett fjelltur popup -->
         <dialog id="slett-fjelltur-dialog">
-            <button id="slett-fjelltur-knapp">Vil du slette fjellturen?</button>
+            <button id="slett-fjelltur-dialog-knapp">Vil du slette fjellturen?</button>
         </dialog>
 
         <!-- Rediger fjelltur popup -->

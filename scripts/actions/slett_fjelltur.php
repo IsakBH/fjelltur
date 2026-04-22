@@ -3,6 +3,15 @@ require_once dirname(__DIR__, 2) . "/config/database.php";
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fjelltur_id = $_POST['slett-fjelltur-id'];
     echo $fjelltur_id;
+
+    $sql = "delete from fjelltur where id = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("i", $fjelltur_id);
+    if($stmt->execute()){
+        header('Location: ../../pages/fjelltur.php');
+    } else {
+        echo "oops";
+    }
 }
 
 

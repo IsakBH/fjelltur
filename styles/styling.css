@@ -121,8 +121,10 @@ html {
     background-color: #d3d5e8;
     &:hover {
         background-color: #c2c5df;
+        cursor: pointer;
     }
     &:active {
         background-color: #b2b5d6;
+        cursor: grabbing;
     }
 }

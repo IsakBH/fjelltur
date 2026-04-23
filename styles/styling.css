@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 *::selection {
@@ -8,7 +9,6 @@
 }
 
 html {
-    font-family: Roboto;
     background-color: #f4f5fa;
 }
 

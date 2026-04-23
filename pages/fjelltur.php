@@ -17,6 +17,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
         <link rel="stylesheet" href="../styles/sidebar.css" />
         <link rel="stylesheet" href="/fjelltur/styles/dialogs.css" />
         <link rel="stylesheet" href="/fjelltur/styles/variables.css" />
+        <link rel="stylesheet" href="/fjelltur/styles/skjema.css" />
         <link rel="icon" href="../storage/images/icons/favicon.ico" />
 
         <!-- Font Awesome -->
@@ -109,17 +110,17 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                 <button class="close-dialog-button" id="close-fjelltur-dialog" onclick="close_fjelltur()"><i class="fa-regular fa-circle-xmark"></i></button>
                 <form id="ny-fjelltur-skjema" action="../scripts/actions/registrer_ny_tur.php" method="post" enctype="multipart/form-data">
                     <label>Navn</label> <br>
-                    <input id="fjelltur-skjema-navn" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn" required>
+                    <input id="fjelltur-skjema-navn" class="skjema-input" type="text" placeholder="F.eks 'Vidden med Brun'" name="fjelltur-navn" required>
 
                     <br> <br>
 
                     <label>Beskrivelse</label> <br>
-                    <textarea id="fjelltur-skjema-beskrivelse" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse" required></textarea>
+                    <textarea id="fjelltur-skjema-beskrivelse" class="skjema-input" type="text" placeholder="F.eks 'Gikk over Vidden, blah blah blah..." name="fjelltur-beskrivelse" required></textarea>
 
                     <br> <br>
 
                     <label>Dato</label> <br>
-                    <input id="fjelltur-skjema-dato" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato" required>
+                    <input id="fjelltur-skjema-dato" class="skjema-input" type="date" value="<?php echo $current_date; ?>" name="fjelltur-dato" required>
 
                     <br> <br>
 
@@ -129,7 +130,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
                     <br <br> <br>
 
                     <label>Fjell</label> <br>
-                    <select id="fjelltur-skjema-fjell" name="fjelltur-fjell" required>
+                    <select id="fjelltur-skjema-fjell" class="skjema-input" name="fjelltur-fjell" required>
                         <?php
                         foreach($result as $fjell){
                             $navn = $fjell['navn'];

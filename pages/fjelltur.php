@@ -142,7 +142,7 @@ $filename = basename($filepath); // henter filnavnet fra filepathen den hentet t
 
                     <br> <br>
 
-                    <input id="fjelltur-skjema-submit" type="submit" value="Registrer tur...">
+                    <input id="fjelltur-skjema-submit" class="skjema-input-submit" type="submit" value="Registrer tur...">
                 </form>
             </div>
         </dialog>

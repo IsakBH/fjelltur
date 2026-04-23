@@ -7,3 +7,14 @@
         outline: 1px solid blue;
     }
 }
+
+.skjema-input-submit {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    background-color: #b8bbf5;
+    &:focus {
+        outline: 1px solid blue;
+    }
+}

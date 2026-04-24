@@ -37,7 +37,7 @@ $user = $_SESSION['user'];
 
         <div id="profile-container">
             <img id="profilbilde" src="<?php echo $user['profilepicture']; ?>">
-            <h1><?php echo $user['name'] .  $user['id']; ?></h1>
+            <h1><?php echo $user['name'] //.  $user['id']; ?></h1>
             <a href="auth/logout.php">
                 <button>Logg ut</button>
             </a>

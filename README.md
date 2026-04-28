@@ -5,6 +5,8 @@
 > Til Hilde:
 > Databasefilen (mysql .sql fil) ligger i storage/database/fjell.sql.
 
+
+# Karakter: 5/6
 # Bilde av databasemodellen fra MySQL Workbench
 **Endringer jeg har gjort etter dette diagrammet ble tegnet:**
 * *Beskrivelse* kolonnen i fjelltur tabellen er nå en varchar og ikke en int - gjorde en liten feil når jeg først satt det opp
